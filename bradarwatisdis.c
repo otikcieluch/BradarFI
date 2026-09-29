@@ -34,7 +34,7 @@ int main(int argc,char *argv[]) {
 		return 1;
 	}
 	//print file type
-	printf("Content:  %s\n", kind(argv[1]));
+	printf("Content:  %s\n", kind(filename));
 
 	//Format & execution
 	execlp("stat", "stat","--printf",
