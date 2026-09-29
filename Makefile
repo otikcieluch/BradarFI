@@ -1,4 +1,4 @@
-//makefile
+
 CC      ?= gcc
 CFLAGS  ?= -Wall -Wextra -O2
 BIN      = bradarwatisdis
