@@ -2,7 +2,7 @@
 #include <string.h>
 #include "bradarwatisdisKIND.h"
 
-static const char *kind(const char *name)
+const char *kind(const char *name)
 {
 	//file types a lot of 'em
 	const char *dot = strrchr(name, '.');
