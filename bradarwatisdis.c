@@ -35,6 +35,9 @@ int main(int argc,char *argv[]) {
 	}
 	//print file type
 	printf("Content:  %s\n", kind(filename));
+    //clear
+	fflush(stdout);
+
 
 	//Format & execution
 	execlp("stat", "stat","--printf",
