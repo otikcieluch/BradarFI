@@ -1,3 +1,4 @@
+.SILENT:
 
 CC      ?= gcc
 CFLAGS  ?= -Wall -Wextra -O2
