@@ -6,7 +6,7 @@ const char *kind(const char *name)
 {
 	//file types a lot of 'em
 	const char *dot = strrchr(name, '.');
-	if (!dot) return "unknown/directory/empty";
+	if (!dot) return "unknown/empty";
 	if (!strcmp(dot, ".c"))       return "C source file";
 	if (!strcmp(dot, ".h"))       return "C header file";
 	if (!strcmp(dot, ".cpp"))     return "C++ source file";
@@ -108,6 +108,6 @@ const char *kind(const char *name)
 	if (!strcmp(dot, ".otf"))     return "OpenType font";
 	if (!strcmp(dot, ".woff"))    return "Web font";
 	if (!strcmp(dot, ".woff2"))   return "Web font";
-	return "unknown/directory/empty";
+	return "unknown/empty";
 }
 
