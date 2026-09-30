@@ -31,13 +31,19 @@ int permissions(const char *filename, char perms[11])
                S_ISSOCK(mode) ? 's' : '-';
     perms[1]  = (mode & S_IRUSR) ? 'r' : '-';
     perms[2]  = (mode & S_IWUSR) ? 'w' : '-';
-    perms[3]  = (mode & S_IXUSR) ? 'x' : '-';
+    //setuid
+    perms[3]  = (mode & S_ISUID) ? ((mode & S_IXUSR) ? 's' : 'S')
+                                 : ((mode & S_IXUSR) ? 'x' : '-');
     perms[4]  = (mode & S_IRGRP) ? 'r' : '-';
     perms[5]  = (mode & S_IWGRP) ? 'w' : '-';
-    perms[6]  = (mode & S_IXGRP) ? 'x' : '-';
+    //setgid
+    perms[6]  = (mode & S_ISGID) ? ((mode & S_IXGRP) ? 's' : 'S')
+                                 : ((mode & S_IXGRP) ? 'x' : '-');
     perms[7]  = (mode & S_IROTH) ? 'r' : '-';
     perms[8]  = (mode & S_IWOTH) ? 'w' : '-';
-    perms[9]  = (mode & S_IXOTH) ? 'x' : '-';
+    //sticky
+    perms[9]  = (mode & S_ISVTX) ? ((mode & S_IXOTH) ? 't' : 'T')
+                                 : ((mode & S_IXOTH) ? 'x' : '-');
     perms[10] = '\0';
     return 0;
 }
@@ -137,10 +143,22 @@ int permsoctal(const char *filename, unsigned int *out)
     return 0;
 }
 
-//main
-int main(int argc, char *argv[])
-//Format & execution
+//access time
+int acctime(const char *filename, struct timespec *out)
 {
+    struct stat sb;
+    //error
+    if (stat(filename, &sb) == -1)
+        return -1;
+
+    *out = sb.st_atim;
+    return 0;
+}
+
+//main
+int main(int argc, char *argv[]) {
+// execution & format
+
     //if no file/dir entered helper
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <file>\n", argv[0]);
@@ -215,6 +233,13 @@ int main(int argc, char *argv[])
         localtime_r(&ts.tv_sec, &tm);
         strftime(tbuf, sizeof tbuf, "%Y-%m-%d %H:%M:%S", &tm);
         printf("Modified: %s\n", tbuf);
+    }
+
+    //acc time init
+    if (acctime(filename, &ts) == 0) {
+        localtime_r(&ts.tv_sec, &tm);
+        strftime(tbuf, sizeof tbuf, "%Y-%m-%d %H:%M:%S", &tm);
+        printf("Accessed: %s\n", tbuf);
     }
 
     /* old "File:     %n\n"
