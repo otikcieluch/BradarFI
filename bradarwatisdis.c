@@ -125,6 +125,19 @@ const char *filetype(const char *filename)
     }
 }
 
+//octal mode
+int permsoctal(const char *filename, unsigned int *out)
+{
+    struct stat sb;
+    //error
+    if (lstat(filename, &sb) == -1)
+        return -1;
+
+    *out = sb.st_mode & 07777;
+    return 0;
+}
+
+//main
 int main(int argc, char *argv[])
 {
     //if no file/dir entered helper
