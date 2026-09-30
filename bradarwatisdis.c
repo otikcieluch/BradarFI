@@ -156,7 +156,11 @@ int main(int argc, char *argv[])
     }
 
     //print file type
+    if (strcmp(filetype(filename), "Directory") == 0) {
+    printf("Content:  Directory\n");
+    } else {
     printf("Content:  %s\n", kind(filename));
+    }
     //clear
     fflush(stdout);
 
