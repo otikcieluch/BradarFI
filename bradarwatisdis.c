@@ -139,6 +139,7 @@ int permsoctal(const char *filename, unsigned int *out)
 
 //main
 int main(int argc, char *argv[])
+//Format & execution
 {
     //if no file/dir entered helper
     if (argc < 2) {
@@ -177,7 +178,7 @@ int main(int argc, char *argv[])
     //clear
     fflush(stdout);
 
-    //Format & execution
+    
     printf("File:     %s\n", filename);
     printf("Type:     %s\n", filetype(filename));
     //filesizes
@@ -186,16 +187,20 @@ int main(int argc, char *argv[])
         printf("Size:     %lld bytes\n", (long long)sz);
     //perms
     char perms[11];
-    if (permissions(filename, perms) == 0)
-        printf("Perms:    %s\n", perms);
+    unsigned int octal;
+    if (permissions(filename, perms) == 0 && permsoctal(filename, &octal) == 0)
+    printf("Perms:    %s (%o)\n", perms, octal);
+    
     //owers and groups
     char user[64], group[64];
+    
     if (ownernames(filename, user, sizeof user, group, sizeof group) == 0)
         printf("Owner:    %s:%s\n", user, group);
 
     struct timespec ts;
     char tbuf[64];
     struct tm tm;
+    
     //brd time init
     if (brdtime(filename, &ts) == 0) {
         localtime_r(&ts.tv_sec, &tm);
@@ -204,6 +209,7 @@ int main(int argc, char *argv[])
     } else {
         printf("Created:  unavailable\n");
     }
+    
     //mod time init
     if (modtime(filename, &ts) == 0) {
         localtime_r(&ts.tv_sec, &tm);
