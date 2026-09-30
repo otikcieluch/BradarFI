@@ -1,5 +1,6 @@
 Itroducing the Bradar File Info or bradarwatisdis inspired by Heyselcuk. \
-Written in C works only on Linux.
+Written in C. \
+Only works on Linux. \
 -----------------------------------------------------------------------------
 
 **Install:** ```git clone https://github.com/otikcieluch/BradarFI.git && cd BradarFI``` \
