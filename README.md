@@ -3,7 +3,7 @@ Written in C works only on Linux.
 -----------------------------------------------------------------------------
 
 **Install:** ```git clone https://github.com/otikcieluch/BradarFI.git && cd BradarFI``` \
-**Make:** ```make``` and ```make install``` (requires sudo) \
+**Make:** ```make``` and ```make install``` (requires sudo or doas) \
 **Dependencies:** ```git``` ```make``` ```gcc```
 
 
