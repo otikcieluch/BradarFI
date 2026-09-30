@@ -16,7 +16,7 @@
 int permissions(const char *filename, char perms[11])
 {
     struct stat sb;
-
+    //error
     if (lstat(filename, &sb) == -1)
         return -1;
 
@@ -59,34 +59,34 @@ int brdtime(const char *filename, struct timespec *out)
 
     return 0;
 }
-
+//modification time
 int modtime(const char *filename, struct timespec *out)
 {
     struct stat sb;
-
+    //error
     if (stat(filename, &sb) == -1)
         return -1;
 
     *out = sb.st_mtim;
     return 0;
 }
-
+//filesize
 int filesize(const char *filename, off_t *out)
 {
     struct stat sb;
-
+    //error
     if (stat(filename, &sb) == -1)
         return -1;
 
     *out = sb.st_size;
     return 0;
 }
-
+//owner
 int ownernames(const char *filename, char *user, size_t ulen,
                char *group, size_t glen)
 {
     struct stat sb;
-
+    //error
     if (stat(filename, &sb) == -1)
         return -1;
 
@@ -105,14 +105,14 @@ int ownernames(const char *filename, char *user, size_t ulen,
 
     return 0;
 }
-
+//file type
 const char *filetype(const char *filename)
 {
     char perms[11];
 
     if (permissions(filename, perms) == -1)
         return "Unknown";
-
+    //types
     switch (perms[0]) {
     case '-': return "Regular file";
     case 'd': return "Directory";
@@ -163,15 +163,15 @@ int main(int argc, char *argv[])
     //Format & execution
     printf("File:     %s\n", filename);
     printf("Type:     %s\n", filetype(filename));
-
+    //filesizes
     off_t sz;
     if (filesize(filename, &sz) == 0)
         printf("Size:     %lld bytes\n", (long long)sz);
-
+    //perms
     char perms[11];
     if (permissions(filename, perms) == 0)
         printf("Perms:    %s\n", perms);
-
+    //owers and groups
     char user[64], group[64];
     if (ownernames(filename, user, sizeof user, group, sizeof group) == 0)
         printf("Owner:    %s:%s\n", user, group);
@@ -179,7 +179,7 @@ int main(int argc, char *argv[])
     struct timespec ts;
     char tbuf[64];
     struct tm tm;
-
+    //brd time init
     if (brdtime(filename, &ts) == 0) {
         localtime_r(&ts.tv_sec, &tm);
         strftime(tbuf, sizeof tbuf, "%Y-%m-%d %H:%M:%S", &tm);
@@ -187,7 +187,7 @@ int main(int argc, char *argv[])
     } else {
         printf("Created:  unavailable\n");
     }
-
+    //mod time init
     if (modtime(filename, &ts) == 0) {
         localtime_r(&ts.tv_sec, &tm);
         strftime(tbuf, sizeof tbuf, "%Y-%m-%d %H:%M:%S", &tm);
