@@ -88,8 +88,7 @@ int filesize(const char *filename, off_t *out)
     return 0;
 }
 //owner
-int ownernames(const char *filename, char *user, size_t ulen,
-               char *group, size_t glen)
+int ownernames(const char *filename, char *user, size_t ulen, char *group, size_t glen)
 {
     struct stat sb;
     //error
