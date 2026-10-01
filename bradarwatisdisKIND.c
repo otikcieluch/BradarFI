@@ -7,8 +7,10 @@ const char *kind(const char *name)
 	//file types a lot of 'em
 	const char *dot = strrchr(name, '.');
 	if (!dot) return "unknown/empty";
+	//goats
 	if (!strcmp(dot, ".c"))       return "C source file";
 	if (!strcmp(dot, ".h"))       return "C header file";
+	
 	if (!strcmp(dot, ".cpp"))     return "C++ source file";
 	if (!strcmp(dot, ".hpp"))     return "C++ header file";
 	if (!strcmp(dot, ".rs"))      return "Rust source file";
