@@ -1,6 +1,6 @@
 //a list of the extensions
-#include <string.h>   /* strrchr */
-#include <strings.h>  /* strcasecmp */
+#include <string.h>   
+#include <strings.h>  
 #include "bradarwatisdisKIND.h"
 
 const char *kind(const char *name)
