@@ -13,6 +13,10 @@
 int main(int argc, char *argv[]) {
 // execution & format
     
+    //multi-word filenames
+    char filename[1024] = "";
+    size_t used = 0;
+
     
     //if no file/dir entered helper
     if (argc < 2) {
@@ -20,17 +24,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    //helper
-    const char *msghlp = xtra(filename);
-    if(msghlp) {
-        printf("%s\n",msghlp);
-        return 1;
-    }
+    
+   
 
-    //multi-word filenames
-    char filename[1024] = "";
-    size_t used = 0;
-
+    
     //also multi-word filenames
     for (int i = 1; i < argc; i++) {
         int n = snprintf(filename + used, sizeof filename - used,
@@ -40,6 +37,13 @@ int main(int argc, char *argv[]) {
             return 1;
         }
         used += n;
+    }
+
+    //helper
+    const char *msghlp = xtra(filename);
+    if(msghlp) {
+        printf("%s\n",msghlp);
+        return 0;
     }
 
     struct stat st;
