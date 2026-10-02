@@ -12,24 +12,26 @@
 //main
 int main(int argc, char *argv[]) {
 // execution & format
-    
-    //multi-word filenames
-    char filename[1024] = "";
-    size_t used = 0;
 
-    
     //if no file/dir entered helper
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
         return 1;
     }
 
-    
-   
+    //multi-word filenames
+    char filename[1024] = "";
+    size_t used = 0;
 
-    
     //also multi-word filenames
     for (int i = 1; i < argc; i++) {
+        //helper
+        const char *msghlp = xtra(argv[i]);
+        if (msghlp) {
+            printf("%s\n", msghlp);
+            return 0;
+        }
+        //filename proc
         int n = snprintf(filename + used, sizeof filename - used,
                          "%s%s", i > 1 ? " " : "", argv[i]);
         if (n < 0 || (size_t)n >= sizeof filename - used) {
@@ -37,13 +39,6 @@ int main(int argc, char *argv[]) {
             return 1;
         }
         used += n;
-    }
-
-    //helper
-    const char *msghlp = xtra(filename);
-    if(msghlp) {
-        printf("%s\n",msghlp);
-        return 0;
     }
 
     struct stat st;
@@ -62,7 +57,7 @@ int main(int argc, char *argv[]) {
     //clear
     fflush(stdout);
 
-    
+
     printf("File:     %s\n", filename);
     printf("Type:     %s\n", filetype(filename));
     //filesizes
@@ -74,17 +69,17 @@ int main(int argc, char *argv[]) {
     unsigned int octal;
     if (permissions(filename, perms) == 0 && permsoctal(filename, &octal) == 0)
     printf("Perms:    %s (%o)\n", perms, octal);
-    
+
     //owers and groups
     char user[64], group[64];
-    
+
     if (ownernames(filename, user, sizeof user, group, sizeof group) == 0)
         printf("Owner:    %s:%s\n", user, group);
 
     struct timespec ts;
     char tbuf[64];
     struct tm tm;
-    
+
     //brd time init
     if (brdtime(filename, &ts) == 0) {
         localtime_r(&ts.tv_sec, &tm);
@@ -93,7 +88,7 @@ int main(int argc, char *argv[]) {
     } else {
         printf("Created:  unavailable\n");
     }
-    
+
     //mod time init
     if (modtime(filename, &ts) == 0) {
         localtime_r(&ts.tv_sec, &tm);
