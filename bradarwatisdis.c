@@ -13,7 +13,7 @@
 int main(int argc, char *argv[]) {
 // execution & format
     
-    }
+    
     //if no file/dir entered helper
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
