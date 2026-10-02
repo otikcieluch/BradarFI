@@ -32,8 +32,7 @@ int main(int argc, char *argv[]) {
             return 0;
         }
         //filename proc
-        int n = snprintf(filename + used, sizeof filename - used,
-                         "%s%s", i > 1 ? " " : "", argv[i]);
+        int n = snprintf(filename + used, sizeof filename - used, "%s%s", i > 1 ? " " : "", argv[i]);
         if (n < 0 || (size_t)n >= sizeof filename - used) {
             fprintf(stderr, "filename too long\n");
             return 1;
