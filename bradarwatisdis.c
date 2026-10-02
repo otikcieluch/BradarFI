@@ -6,16 +6,24 @@
 #include <time.h>
 #include "bradarwatisdisKIND.h"
 #include "bradarwatisdisFUNC.h"
+#include "bradarwatisdisXTRA.h"
 
 
 //main
 int main(int argc, char *argv[]) {
 // execution & format
-
+    
+    }
     //if no file/dir entered helper
     if (argc < 2) {
-        fprintf(stderr, "Usage: %s <file>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
         return 1;
+    }
+
+    //helper
+    const char *msghlp = xtra(argv[1]);
+    if(msghlp) {
+        printf("%s\n",msghlp);
     }
 
     //multi-word filenames
