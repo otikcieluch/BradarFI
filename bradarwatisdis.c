@@ -24,6 +24,7 @@ int main(int argc, char *argv[]) {
     const char *msghlp = xtra(argv[1]);
     if(msghlp) {
         printf("%s\n",msghlp);
+        return 1;
     }
 
     //multi-word filenames
