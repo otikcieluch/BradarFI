@@ -1,4 +1,4 @@
-Itroducing the Bradar File Info or bradarwatisdis inspired by Heyselcuk. \
+Itroducing the Bradar File Info or bradarwatisdis. \
 Written in C. \
 Only works on Linux. 
 -----------------------------------------------------------------------------
