@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     }
 
     //helper
-    const char *msghlp = xtra(argv[1]);
+    const char *msghlp = xtra(filename);
     if(msghlp) {
         printf("%s\n",msghlp);
         return 1;
