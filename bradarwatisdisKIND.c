@@ -4,9 +4,11 @@
 #include "bradarwatisdisKIND.h"
 
 const char *kind(const char *name) {
+	
 	//file types a lot of 'em
 	const char *dot = strrchr(name, '.');
 	if (!dot) return "unknown/empty";
+	
 	//goats
 	if (!strcasecmp(dot, ".c"))       return "C source file";
 	if (!strcasecmp(dot, ".h"))       return "C header file";
