@@ -31,6 +31,7 @@ int main(int argc, char *argv[]) {
             printf("%s\n", msghlp);
             return 0;
         }
+        
         //filename proc
         int n = snprintf(filename + used, sizeof filename - used, "%s%s", i > 1 ? " " : "", argv[i]);
         if (n < 0 || (size_t)n >= sizeof filename - used) {
@@ -56,13 +57,16 @@ int main(int argc, char *argv[]) {
     //clear
     fflush(stdout);
 
-
+    //print filename
     printf("File:     %s\n", filename);
+    //filetype not kind
     printf("Type:     %s\n", filetype(filename));
+    
     //filesizes
     off_t sz;
     if (filesize(filename, &sz) == 0)
         printf("Size:     %lld bytes\n", (long long)sz);
+    
     //perms
     char perms[11];
     unsigned int octal;
@@ -74,7 +78,8 @@ int main(int argc, char *argv[]) {
 
     if (ownernames(filename, user, sizeof user, group, sizeof group) == 0)
         printf("Owner:    %s:%s\n", user, group);
-
+    
+    //time
     struct timespec ts;
     char tbuf[64];
     struct tm tm;
