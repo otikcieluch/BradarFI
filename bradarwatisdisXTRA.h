@@ -1,7 +1,7 @@
 #ifndef BRADARWATISDISXTRA_H
 #define BRADARWATISDISXTRA_H
 
-const char *xtra(const char *name);
+const char *xtrahlp(const char *name);
 
 //wip
 
