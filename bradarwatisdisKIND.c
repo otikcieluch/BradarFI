@@ -3,8 +3,7 @@
 #include <strings.h>  
 #include "bradarwatisdisKIND.h"
 
-const char *kind(const char *name)
-{
+const char *kind(const char *name) {
 	//file types a lot of 'em
 	const char *dot = strrchr(name, '.');
 	if (!dot) return "unknown/empty";
