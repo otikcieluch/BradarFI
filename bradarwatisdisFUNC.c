@@ -13,8 +13,7 @@
 
 
 
-int permissions(const char *filename, char perms[11])
-{
+int permissions(const char *filename, char perms[11]) {
     struct stat sb;
     //error
     if (lstat(filename, &sb) == -1)
@@ -49,8 +48,7 @@ int permissions(const char *filename, char perms[11])
 }
 
 //birth time/date
-int brdtime(const char *filename, struct timespec *out)
-{
+int brdtime(const char *filename, struct timespec *out) {
     struct statx sx;
 
     //errors
@@ -65,9 +63,9 @@ int brdtime(const char *filename, struct timespec *out)
 
     return 0;
 }
+
 //modification time
-int modtime(const char *filename, struct timespec *out)
-{
+int modtime(const char *filename, struct timespec *out) {
     struct stat sb;
     //error
     if (stat(filename, &sb) == -1)
@@ -76,9 +74,9 @@ int modtime(const char *filename, struct timespec *out)
     *out = sb.st_mtim;
     return 0;
 }
+
 //filesize
-int filesize(const char *filename, off_t *out)
-{
+int filesize(const char *filename, off_t *out) {
     struct stat sb;
     //error
     if (stat(filename, &sb) == -1)
@@ -87,9 +85,9 @@ int filesize(const char *filename, off_t *out)
     *out = sb.st_size;
     return 0;
 }
+
 //owner
-int ownernames(const char *filename, char *user, size_t ulen, char *group, size_t glen)
-{
+int ownernames(const char *filename, char *user, size_t ulen, char *group, size_t glen) {
     struct stat sb;
     //error
     if (stat(filename, &sb) == -1)
@@ -110,9 +108,9 @@ int ownernames(const char *filename, char *user, size_t ulen, char *group, size_
 
     return 0;
 }
+
 //file type
-const char *filetype(const char *filename)
-{
+const char *filetype(const char *filename) {
     char perms[11];
 
     if (permissions(filename, perms) == -1)
@@ -131,8 +129,7 @@ const char *filetype(const char *filename)
 }
 
 //octal mode
-int permsoctal(const char *filename, unsigned int *out)
-{
+int permsoctal(const char *filename, unsigned int *out) {
     struct stat sb;
     //error
     if (lstat(filename, &sb) == -1)
@@ -143,8 +140,7 @@ int permsoctal(const char *filename, unsigned int *out)
 }
 
 //access time
-int acctime(const char *filename, struct timespec *out)
-{
+int acctime(const char *filename, struct timespec *out) {
     struct stat sb;
     //error
     if (stat(filename, &sb) == -1)
