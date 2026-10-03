@@ -111,5 +111,6 @@ const char *kind(const char *name)
 	if (!strcasecmp(dot, ".otf"))     return "OpenType font";
 	if (!strcasecmp(dot, ".woff"))    return "Web font";
 	if (!strcasecmp(dot, ".woff2"))   return "Web font";
+	//My hand hurts
 	return "unknown/empty";
 }
