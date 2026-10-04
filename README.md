@@ -10,3 +10,5 @@ Only works on Linux.
 
 
 <img width="216" height="195" alt="image" src="https://github.com/user-attachments/assets/99cf957f-ec08-4189-aa3f-05c72d288390" />
+
+If you need help ,have issues or you want to add a feaure contact me: ```otikcieluch@gmail.com``` or 
