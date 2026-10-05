@@ -8,6 +8,7 @@ typedef struct {
  int noperms;
  int nobrdtime;
  int noacctime;
+ int noowner
 } xtraflags;
 //wip
 
