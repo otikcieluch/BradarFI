@@ -24,6 +24,7 @@ int xtraflag(const char *name, xtraflags *xfl) {
     if (!strcmp(name,"--no-filesize")) {xfl->nofilesize = 1; return 1; }
     if (!strcmp(name,"--no-filetype")) {xfl->nofiletype = 1; return 1; }
     if (!strcmp(name,"--no-file-content")) {xfl->noflct = 1; return 1; }
+    if (!strcmp(name,"--no-file")) {xfl->noflname = 1; return 1; }
 
     return 0;
 }
