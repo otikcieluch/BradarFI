@@ -30,7 +30,8 @@ const char *xtrahlp(const char *name) {
 
 //flags
 int xtraflag(const char *name, xtraflags *xfl) {
-
+    
+    //flags
     if (!strcmp(name,"--no-octal")) {xfl->nooctal = 1; return 1; }
     if (!strcmp(name,"--no-modified")) {xfl->nomodified = 1; return 1; }
     if (!strcmp(name,"--no-permissions")) {xfl->noperms = 1; return 1; }
