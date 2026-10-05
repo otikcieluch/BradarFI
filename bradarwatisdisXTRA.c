@@ -17,7 +17,7 @@ int xtraflags(const char *name, xtraflag *xfl) {
     if (!strcmp(name,"--no-modified")) {xfl->nomodified = 1; return 1; }
     if (!strcmp(name,"--no-permissions")) {xfl->noperms = 1; return 1; }
     if (!strcmp(name,"--no-birth-time")) {xfl->nobrdtime = 1; return 1; }
-    if (!strcmp(name,"--no-acces-time")) {xfl->noacctime = 1; return 1; }
+    if (!strcmp(name,"--no-access-time")) {xfl->noacctime = 1; return 1; }
     if (!strcmp(name,"--no-owner-name")) {xfl->noowner = 1; return 1; }
     if (!strcmp(name,"--no-filesize")) {xfl->nofilesize = 1; return 1; }
     if (!strcmp(name,"--no-filetype")) {xfl->nofiletype = 1; return 1; }
