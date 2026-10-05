@@ -12,6 +12,7 @@ typedef struct {
     int nofilesize;
     int nofiletype;
     int noflct;
+    int noflname;
 } xtraflags;
 
 const char *xtrahlp(const char *name);
