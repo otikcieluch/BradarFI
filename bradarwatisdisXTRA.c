@@ -8,6 +8,7 @@ const char *xtrahlp(const char *name) {
         return "BradarFI is a simple file info helper.\n"
                "Usage: bradarwatisdis <filename> [flags]\n"
                "Flags:\n"
+               "  --help              show help\n"
                "  --no-file           hide File\n"
                "  --no-file-content   hide Content\n"
                "  --no-filetype       hide Type\n"
