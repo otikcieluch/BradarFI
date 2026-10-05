@@ -3,6 +3,7 @@
 
 const char *xtrahlp(const char *name);
 
+//the flags struct
 typedef struct {
  int nooctal;
  int nomodified;
@@ -14,6 +15,6 @@ typedef struct {
  int nofiletype;
  int noflct;
 } xtraflags;
-//wip
+
 
 #endif
