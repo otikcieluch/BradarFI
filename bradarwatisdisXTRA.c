@@ -11,7 +11,7 @@ const char *xtrahlp(const char *name) {
     return NULL;
 }
 
-int xtraflags(const char *name, xtraflag *xfl) {
+int xtraflag(const char *name, xtraflags *xfl) {
 
     if (!strcmp(name,"--no-octal")) {xfl->nooctal = 1; return 1; }
     if (!strcmp(name,"--no-modified")) {xfl->nomodified = 1; return 1; }
