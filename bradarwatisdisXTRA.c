@@ -4,7 +4,23 @@
 //helper
 const char *xtrahlp(const char *name) {
     //helper
-    if (!strcmp(name,"-h") || !strcmp(name,"--help")) return "BradarFI is a simple file info helper. Usage: bradarwatisdis <filename>";
+    if (!strcmp(name,"-h") || !strcmp(name,"--help")) {
+        return "BradarFI is a simple file info helper.\n"
+               "Usage: bradarwatisdis <filename> [flags]\n"
+               "Flags:\n"
+               "  --no-file           hide File\n"
+               "  --no-file-content   hide Content\n"
+               "  --no-filetype       hide Type\n"
+               "  --no-filesize       hide Size\n"
+               "  --no-permissions    hide the rwx string\n"
+               "  --no-octal          hide the octal mode\n"
+               "  --no-owner-name     hide Owner\n"
+               "  --no-birth-time     hide Created\n"
+               "  --no-modified       hide Modified\n"
+               "  --no-access-time    hide Accessed";
+
+
+    }
 
     
 
