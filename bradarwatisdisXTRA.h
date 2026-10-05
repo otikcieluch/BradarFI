@@ -2,6 +2,7 @@
 #define BRADARWATISDISXTRA_H
 
 const char *xtrahlp(const char *name);
+
 typedef struct {
  int nooctal;
  int nomodified;
@@ -10,6 +11,8 @@ typedef struct {
  int noacctime;
  int noowner
  int nofilesize;
+ int nofiletype;
+ int noflct;
 } xtraflags;
 //wip
 
