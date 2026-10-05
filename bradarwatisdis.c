@@ -77,7 +77,8 @@ int main(int argc, char *argv[]) {
     fflush(stdout);
 
     //print filename
-    printf("File:     %s\n", filename);
+    if(!o.noflname)
+       printf("File:     %s\n", filename);
     
     //filetype not kind
     if (!o.nofiletype)
