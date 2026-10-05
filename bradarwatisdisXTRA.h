@@ -16,6 +16,7 @@ typedef struct {
 } xtraflags;
 
 const char *xtrahlp(const char *name);
+
 int xtraflag(const char *name, xtraflags *xfl);
 
 #endif
