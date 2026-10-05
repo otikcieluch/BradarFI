@@ -9,6 +9,7 @@ typedef struct {
  int nobrdtime;
  int noacctime;
  int noowner
+ int nofilesize;
 } xtraflags;
 //wip
 
