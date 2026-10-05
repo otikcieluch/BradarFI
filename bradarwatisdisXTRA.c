@@ -6,7 +6,9 @@ const char *xtrahlp(const char *name) {
     //helper
     if (!strcmp(name,"-h") || !strcmp(name,"--help")) {
         return "BradarFI is a simple file info helper.\n"
+               "\n"
                "Usage: bradarwatisdis <filename> [flags]\n"
+               "\n"
                "Flags:\n"
                "  --help              show help\n"
                "  --no-file           hide File\n"
