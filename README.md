@@ -21,6 +21,20 @@ Only works on Linux.
 **Run:**
 - ```bradarwatisdis <filename> [flags]``` or ```--help``` if you need info/flags
 
+**Flags:**
+- Disable specific file information. Multiple flags can be used at the same time.
+
+- `--no-file` | File name line 
+- `--no-file-content` | Content line 
+- `--no-filetype` | Type line 
+- `--no-filesize` | Size line 
+- `--no-permissions` | The `rwx` string (octal still shown) 
+- `--no-octal` | The octal mode (`rwx` string still shown) 
+- `--no-owner-name` | Owner line 
+- `--no-birth-time` | Created line 
+- `--no-modified` | Modified line 
+- `--no-access-time` | Accessed line 
+
 
 
 <img width="216" height="195" alt="image" src="https://github.com/user-attachments/assets/99cf957f-ec08-4189-aa3f-05c72d288390" /> 
