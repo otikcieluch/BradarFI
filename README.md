@@ -12,4 +12,4 @@ Only works on Linux.
 
 <img width="216" height="195" alt="image" src="https://github.com/user-attachments/assets/99cf957f-ec08-4189-aa3f-05c72d288390" /> 
 
-><sup> If you have any issues or want to suggest a feature, contact me at otikcieluch@gmail.com or open an issue on https://github.com/otikcieluch/BradarFI/issues </sup>
+><sup> If you have any issues or want to suggest a feature or just want to let me know smomething, contact me at otikcieluch@gmail.com or open an issue on https://github.com/otikcieluch/BradarFI/issues </sup>
