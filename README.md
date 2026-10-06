@@ -3,10 +3,23 @@ A lightweight, standalone file info tool written in C. \
 Only works on Linux. 
 -----------------------------------------------------------------------------
 
-**Install:** ```git clone https://github.com/otikcieluch/BradarFI.git && cd BradarFI``` \
-**Make:** ```make``` and ```make install``` (requires sudo or doas) \
-**Dependencies:** ```make``` ```gcc``` ```glibc```(or ```musl```) ```Linux kernel``` optionally ```git``` for fetching the source \
-**Run:** ```bradarwatisdis <filename> [flags]``` or ```--help``` if you need info/flags
+**Install:**
+- ```git clone https://github.com/otikcieluch/BradarFI.git``` 
+- ```cd BradarFI``` 
+  
+**Make:**
+- ```make```
+- ```make install``` (requires sudo or doas) 
+  
+**Dependencies:**
+- ```make```
+- ```gcc```
+- ```glibc``` (or ```musl```)
+- ```Linux kernel```
+- ```git``` (optionally for cloning the source)
+
+**Run:**
+- ```bradarwatisdis <filename> [flags]``` or ```--help``` if you need info/flags
 
 
 
