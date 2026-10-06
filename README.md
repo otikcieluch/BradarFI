@@ -23,7 +23,7 @@ Only works on Linux.
 
 **Flags:**
 - Disable specific file information. Multiple flags can be used at the same time.
----
+ ---
 - ```--no-file``` | File name line 
 - ```--no-file-content``` | Content line 
 - ```--no-filetype``` | Type line 
