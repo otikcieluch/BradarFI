@@ -1,4 +1,4 @@
-Itroducing the Bradar File Info or bradarwatisdis. \
+# Itroducing the Bradar File Info or ```bradarwatisdis```. 
 A lightweight, standalone file info tool written in C. \
 Only works on Linux. 
 -----------------------------------------------------------------------------
