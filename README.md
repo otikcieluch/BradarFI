@@ -1,13 +1,13 @@
-# Itroducing the Bradar File Info or ```bradarwatisdis```. 
+# Introducing the Bradar File Info or ```bradarwatisdis```. 
 A lightweight, standalone file info tool written in C. \
 Only works on Linux. 
 -----------------------------------------------------------------------------
 
-**Install:**
+**Clone:**
 - ```git clone https://github.com/otikcieluch/BradarFI.git``` 
-- ```cd BradarFI``` 
   
 **Make:**
+- ```cd BradarFI```
 - ```make```
 - ```make install``` (requires sudo or doas) 
   
@@ -24,16 +24,16 @@ Only works on Linux.
 **Flags:**
 - Disable specific file information. Multiple flags can be used at the same time.
  ---
-- ```--no-file``` | File name line 
-- ```--no-file-content``` | Content line 
-- ```--no-filetype``` | Type line 
-- ```--no-filesize``` | Size line 
-- ```--no-permissions``` | The `rwx` string (octal still shown) 
-- ```--no-octal``` | The octal mode (`rwx` string still shown) 
-- ```--no-owner-name``` | Owner line 
-- ```--no-birth-time``` | Created line 
-- ```--no-modified``` | Modified line 
-- ```--no-access-time``` | Accessed line 
+- `--no-file` | File name line
+- `--no-file-content` | Content line
+- `--no-filetype` | Type line
+- `--no-filesize` | Size line
+- `--no-permissions` | The `rwx` string (octal still shown)
+- `--no-octal` | The octal mode (`rwx` string still shown)
+- `--no-owner-name` | Owner line
+- `--no-birth-time` | Created line
+- `--no-modified` | Modified line
+- `--no-access-time` | Accessed line
 
 
 
