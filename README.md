@@ -28,7 +28,7 @@ Only works on Linux.
 
 **Flags:**
 
-- Disable specific file information. Multiple flags can be used at the same time.
+- Disable specific file information. Multiple flags can be used at the same time. (a file named as one of the flags won't work) 
 
 ---
 
