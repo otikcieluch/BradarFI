@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
         } else {
             n = snprintf(filename + used, sizeof filename - used, "%s", argv[i]);
         }
-
+        //if too long
         if (n < 0 || (size_t)n >= sizeof filename - used) {
             fprintf(stderr, "filename too long\n");
             return 1;
@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
         printf("Accessed: %s\n", tbuf);
     }
 
-    /* old "File:     %n\n"
+    /* template "File:     %n\n"
            "Type:     %F\n"
            "Size:     %s bytes\n"
            "Perms:    %A (%a)\n"
