@@ -47,5 +47,6 @@ Only works on Linux.
 
 
 
-><sup> If you have any issues, want to suggest a feature, become a contributor, or just want to let me know something, contact me at otikcieluch@gmail.com or open an issue on [GitHub](https://github.com/otikcieluch/BradarFI/issues). </sup> \
+><sup>If you have any issues, want to suggest a feature, become a contributor, or just want to let me know something, contact me at otikcieluch@gmail.com or open an issue on [GitHub](https://github.com/otikcieluch/BradarFI/issues). </sup> \
+><sup>Feel free to fork the repository or open a pull request. </sup>
 ><sup>Click here for the [Prototype](https://github.com/otikcieluch/C-Projects/tree/main/bradarFI). </sup>
