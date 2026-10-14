@@ -1,8 +1,10 @@
 /*
-  Introducing the Bradar File Info or bradarwatisdis.
-  A lightweight, standalone file info tool written in C.
-  Only works on Linux.
-----------------------------------------------------------------
+Introducing the Bradar File Info or bradarwatisdis.
+A lightweight, standalone file info tool written in C.
+Only works on Linux.
+  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Clone:
 
  git clone https://github.com/otikcieluch/BradarFI.git
@@ -37,6 +39,8 @@ Flags:
  --no-birth-time | Created line
  --no-modified | Modified line
  --no-access-time | Accessed line
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Feel free to fork the repository or open a pull request
  
