@@ -35,16 +35,26 @@ const char *xtrahlp(const char *name) {
 int xtraflag(const char *name, xtraflags *xfl) {
     
     //flags
-    if (!strcmp(name,"--no-octal")) {xfl->nooctal = 1; return 1; }
-    if (!strcmp(name,"--no-modified")) {xfl->nomodified = 1; return 1; }
-    if (!strcmp(name,"--no-permissions")) {xfl->noperms = 1; return 1; }
+    if (!strcmp(name,"--no-octal")) {xfl->nooctal = 1; return 1; } //rwx still shows ,disable both for no line
+    
+    if (!strcmp(name,"--no-modified")) {xfl->nomodified = 1; return 1; } 
+    
+    if (!strcmp(name,"--no-permissions")) {xfl->noperms = 1; return 1; } //octal still shows ,disable both for no line
+    
     if (!strcmp(name,"--no-birth-time")) {xfl->nobrdtime = 1; return 1; }
+    
     if (!strcmp(name,"--no-access-time")) {xfl->noacctime = 1; return 1; }
+    
     if (!strcmp(name,"--no-owner-name")) {xfl->noowner = 1; return 1; }
+    
     if (!strcmp(name,"--no-filesize")) {xfl->nofilesize = 1; return 1; }
+    
     if (!strcmp(name,"--no-filetype")) {xfl->nofiletype = 1; return 1; }
+    
     if (!strcmp(name,"--no-file-content")) {xfl->noflct = 1; return 1; }
+    
     if (!strcmp(name,"--no-file")) {xfl->noflname = 1; return 1; }
 
+    //returns 0
     return 0;
 }
