@@ -2,7 +2,7 @@
 
 A lightweight, standalone file info tool written in C. \
 Only works on Linux.
---------------------
+---
 
 **Clone:**
 
@@ -28,8 +28,7 @@ Only works on Linux.
 
 **Flags:**
 
-- Disable specific file information. Multiple flags can be used at the same time. (a file named as one of the flags won't work) 
-
+- Disable specific file information. Multiple flags can be used at the same time. (a file named as one of the flags won't work)
 ---
 
 - `--no-file` | File name line
