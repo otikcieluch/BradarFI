@@ -1,6 +1,6 @@
 # Introducing the Bradar File Info or `bradarwatisdis`.
 
-A lightweight, standalone file info tool written in <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/489f166e-0789-4644-8104-9401e615d70c" />
+A lightweight, standalone file info tool written in <img width="35" height="35" alt="image" src="https://github.com/user-attachments/assets/489f166e-0789-4644-8104-9401e615d70c" />
 . \
 Only works on Linux.
 ---
