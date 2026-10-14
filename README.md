@@ -1,6 +1,7 @@
 # Introducing the Bradar File Info or `bradarwatisdis`.
 
-A lightweight, standalone file info tool written in C. \
+A lightweight, standalone file info tool written in <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/489f166e-0789-4644-8104-9401e615d70c" />
+. \
 Only works on Linux.
 ---
 
@@ -43,6 +44,8 @@ Only works on Linux.
 - `--no-access-time` | Accessed line
 
 <img width="432" height="390" alt="image" src="https://github.com/user-attachments/assets/99cf957f-ec08-4189-aa3f-05c72d288390" /> <img width="329" height="390" alt="Tux" src="https://github.com/user-attachments/assets/f90a9e3d-d49b-4282-9ee1-098c10bd6fff" />
+
+
 
 
 
