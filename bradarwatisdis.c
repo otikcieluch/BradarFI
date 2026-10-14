@@ -38,7 +38,7 @@ Flags:
  --no-modified | Modified line
  --no-access-time | Accessed line
 
- Read the GPL-3.0 License for licensing ( LICENCE in the repo)
+ Read the GPL-3.0 License for licensing ( LICENCE in the repo )
 */
 
 #define _GNU_SOURCE
