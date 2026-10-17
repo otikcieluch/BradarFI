@@ -28,7 +28,8 @@ int permissions(const char *filename, char perms[11]) {
     S_ISBLK(mode)  ? 'b' :
     S_ISFIFO(mode) ? 'p' :
     S_ISSOCK(mode) ? 's' : '-';
-    
+
+    //permissions
     perms[1]  = (mode & S_IRUSR) ? 'r' : '-';
     perms[2]  = (mode & S_IWUSR) ? 'w' : '-';
     perms[3]  = (mode & S_ISUID) ? ((mode & S_IXUSR) ? 's' : 'S') : ((mode & S_IXUSR) ? 'x' : '-');
