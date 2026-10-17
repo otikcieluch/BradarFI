@@ -8,6 +8,7 @@ Only works on Linux.
 Clone:
 
  git clone https://github.com/otikcieluch/BradarFI.git
+ 
 Make:
 
  cd BradarFI
