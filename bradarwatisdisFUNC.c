@@ -28,21 +28,16 @@ int permissions(const char *filename, char perms[11]) {
     S_ISBLK(mode)  ? 'b' :
     S_ISFIFO(mode) ? 'p' :
     S_ISSOCK(mode) ? 's' : '-';
+    
     perms[1]  = (mode & S_IRUSR) ? 'r' : '-';
     perms[2]  = (mode & S_IWUSR) ? 'w' : '-';
-    //setuid
-    perms[3]  = (mode & S_ISUID) ? ((mode & S_IXUSR) ? 's' : 'S')
-    : ((mode & S_IXUSR) ? 'x' : '-');
+    perms[3]  = (mode & S_ISUID) ? ((mode & S_IXUSR) ? 's' : 'S') : ((mode & S_IXUSR) ? 'x' : '-');
     perms[4]  = (mode & S_IRGRP) ? 'r' : '-';
     perms[5]  = (mode & S_IWGRP) ? 'w' : '-';
-    //setgid
-    perms[6]  = (mode & S_ISGID) ? ((mode & S_IXGRP) ? 's' : 'S')
-    : ((mode & S_IXGRP) ? 'x' : '-');
+    perms[6]  = (mode & S_ISGID) ? ((mode & S_IXGRP) ? 's' : 'S') : ((mode & S_IXGRP) ? 'x' : '-');
     perms[7]  = (mode & S_IROTH) ? 'r' : '-';
     perms[8]  = (mode & S_IWOTH) ? 'w' : '-';
-    //sticky
-    perms[9]  = (mode & S_ISVTX) ? ((mode & S_IXOTH) ? 't' : 'T')
-    : ((mode & S_IXOTH) ? 'x' : '-');
+    perms[9]  = (mode & S_ISVTX) ? ((mode & S_IXOTH) ? 't' : 'T') : ((mode & S_IXOTH) ? 'x' : '-');
     perms[10] = '\0';
     return 0;
 }
