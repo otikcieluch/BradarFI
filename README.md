@@ -53,5 +53,5 @@ Only works on Linux.
 ><sup>Feel free to [fork the repository](https://github.com/otikcieluch/BradarFI/fork) or [open a pull request](https://github.com/otikcieluch/BradarFI/pulls). </sup> \
 ><sup> Read the [GPL-3.0 License](LICENSE) for licensing. </sup> \
 ><sup>Click here for the [Prototype](https://github.com/otikcieluch/C-Projects/tree/main/bradarFI). </sup> \
-><sup>Inspired by [coreutils stat.c](https://github.com/coreutils/coreutils/blob/master/src/stat.c).
+><sup>Inspired by [GNU Coreutils stat.c](https://github.com/coreutils/coreutils/blob/master/src/stat.c).
 
