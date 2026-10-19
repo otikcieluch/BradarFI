@@ -15,8 +15,10 @@ typedef struct {
     int noflname;
 } xtraflags;
 
+//help func
 const char *xtrahlp(const char *name);
 
+//flags func
 int xtraflag(const char *name, xtraflags *xfl);
 
 #endif
