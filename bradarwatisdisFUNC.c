@@ -12,7 +12,7 @@
 
 
 
-
+//permissions (rwx)
 int permissions(const char *filename, char perms[11]) {
     struct stat sb;
     //error
