@@ -126,8 +126,8 @@ int main(int argc, char *argv[]) {
         }
     }
     
-    //clear
-    fflush(stdout);
+    //clear not needed anymore
+    //fflush(stdout); not needed anymore
 
     //print filename
     if(!o.noflname)
