@@ -3,7 +3,7 @@
 
 //helper
 const char *xtrahlp(const char *name) {
-    //helper
+    //helper proc
     if (!strcmp(name,"-h") || !strcmp(name,"--help")) {
         return "BradarFI is a simple file info helper.\n"
                "\n"
@@ -33,8 +33,7 @@ const char *xtrahlp(const char *name) {
 
 //flags
 int xtraflag(const char *name, xtraflags *xfl) {
-    
-    //flags
+    //flags proc
     if (!strcmp(name,"--no-octal")) {xfl->nooctal = 1; return 1; } //rwx still shows ,disable both for no line
     
     if (!strcmp(name,"--no-modified")) {xfl->nomodified = 1; return 1; } 
