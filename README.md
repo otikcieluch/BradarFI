@@ -42,9 +42,9 @@ Only works on Linux.
 - `--no-birth-time` | Created line
 - `--no-modified` | Modified line
 - `--no-access-time` | Accessed line
-
+---
 <img width="432" height="390" alt="image" src="https://github.com/user-attachments/assets/99cf957f-ec08-4189-aa3f-05c72d288390" /> <img width="329" height="390" alt="Tux" src="https://github.com/user-attachments/assets/f90a9e3d-d49b-4282-9ee1-098c10bd6fff" />
-
+---
 
 
 
