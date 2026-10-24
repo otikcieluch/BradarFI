@@ -1,4 +1,6 @@
 /*
+-------------------------------------------------------------------------
+
 Introducing the Bradar File Info or bradarwatisdis.
 A lightweight, standalone file info tool written in C.
 Only works on Linux.
@@ -49,6 +51,8 @@ Feel free to fork the repository or open a pull request
 Read the GPL-3.0 License for licensing ( LICENSE in the repository )
 
 Inspired by GNU Coreutils stat.c
+
+-------------------------------------------------------------------------
 */
 
 #define _GNU_SOURCE
