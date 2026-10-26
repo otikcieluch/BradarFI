@@ -13,7 +13,7 @@ Only works on Linux.
 
 - `cd BradarFI`
 - `make`
-- `make install` (requires sudo or doas)
+- `sudo make install` (or `doas make install`)
 
 **Dependencies:**
 
