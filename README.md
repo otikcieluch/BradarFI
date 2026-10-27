@@ -21,7 +21,6 @@ Only works on Linux.
 - `gcc`
 - `glibc` (or `musl`)
 - `git` (optionally for cloning the source)
-- Preferably the latest versions.
 
 **Run:**
 
