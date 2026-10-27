@@ -15,7 +15,7 @@ Make:
 
  cd BradarFI
  make
- make install (requires sudo or doas)
+ make install (or doas make install)
 
 Dependencies:
 
@@ -23,7 +23,6 @@ Dependencies:
  gcc
  glibc (or musl)
  git (optionally for cloning the source)
- Preferably the latest versions.
 
 Run:
 
