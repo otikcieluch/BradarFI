@@ -5,6 +5,8 @@
 #include <sys/types.h>
 #include <time.h>
 
+//functions
+
 int permissions(const char *filename, char perms[11]);
 
 int brdtime(const char *filename, struct timespec *out);
