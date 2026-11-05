@@ -1,7 +1,7 @@
 #ifndef BRADARWATISDISXTRA_H
 #define BRADARWATISDISXTRA_H
 
-//the flags struct
+//flags struct
 typedef struct {
     int nooctal;
     int nomodified;
