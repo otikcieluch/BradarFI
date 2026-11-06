@@ -49,7 +49,7 @@ Flags:
 
 Feel free to fork the repository or open a pull request
 
-Read the GPL-3.0 License for licensing ( LICENSE in the repository )
+Read the GPL-3.0 license for licensing ( LICENSE in the repository )
 
 Inspired by GNU Coreutils stat.c
 
