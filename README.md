@@ -53,4 +53,3 @@ Only works on Linux.
 ><sup>Click here for the [Prototype](https://github.com/otikcieluch/C-Projects/tree/main/bradarFI). </sup> \
 ><sup>Inspired by [GNU Coreutils stat.c](https://github.com/coreutils/coreutils/blob/master/src/stat.c).
 ---
-
