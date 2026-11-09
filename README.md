@@ -46,7 +46,6 @@ Only works on Linux.
 <img width="432" height="390" alt="image" src="https://github.com/user-attachments/assets/99cf957f-ec08-4189-aa3f-05c72d288390" /> <img width="329" height="390" alt="Tux" src="https://github.com/user-attachments/assets/f90a9e3d-d49b-4282-9ee1-098c10bd6fff" />
 ---
 
-
 ><sup>If you have any issues, want to suggest a feature, become a contributor, or just want to let me know something, contact me at otikcieluch@gmail.com or open an issue on [GitHub](https://github.com/otikcieluch/BradarFI/issues). </sup> \
 ><sup>Feel free to [fork the repository](https://github.com/otikcieluch/BradarFI/fork) or [open a pull request](https://github.com/otikcieluch/BradarFI/pulls). </sup> \
 ><sup> Read the [GPL-3.0 license](LICENSE) for licensing. </sup> \
